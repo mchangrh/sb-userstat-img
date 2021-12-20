@@ -32,7 +32,7 @@ const categories = async (request, reply) => {
     startAngle += sliceAngle;
     // create square label
     const rectX = canvas.width - x * 1.25 + 5;
-    const rectY = canvas.height / (categoryData.length + 1) * (i + 1) - 7.5;
+    const rectY = canvas.height / (categoryData.length + 1) * (i + 1) - 15;
     const rectSize = 30;
     ctx.fillRect(rectX, rectY, rectSize, rectSize);
     // create label text
