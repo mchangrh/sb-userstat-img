@@ -3,7 +3,7 @@ var fastify = Fastify()
 const { categories } = require('./routes/categories');
 const { stats } = require('./routes/stats');
 
-fastify.get('/', categories)
+fastify.get('/pie', categories)
 fastify.get('/stats', stats)
 
-fastify.listen(3000);
+fastify.listen(4000);
