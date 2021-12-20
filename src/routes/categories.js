@@ -14,7 +14,7 @@ const categories = async (request, reply) => {
   const x = canvas.width / 3.25;
   const y = canvas.height / 2;
   let startAngle = -Math.PI / 2;
-  ctx.font = "15px Arial";
+  ctx.font = "13px DejaVu Sans";
   for (let i = 0; i < categoryData.length; i++) {
     // create slice of pie chart
     const sliceAngle = 2 * Math.PI * categoryData[i] / total;
