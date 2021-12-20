@@ -9,7 +9,8 @@ const stats = async (request, reply) => {
   const res = await axios.get(`${BASEURL}/userStats?publicUserID=${userID}&fetchCategoryStats=true`)
   const formatThousand = (num) => {
     const k = num/1000
-    return k+"".split('.')[1].len < 2 ? k : k.toFixed(1)
+    const dec = k+"".split('.')[1]?.len
+    return dec < 2 ? k : k.toFixed(1)
   }
   const categoryData = Object.values(res.data.categoryCount).map(x => x > 1000 ? formatThousand(x) + "k" : x)
   const canvas = Canvas.createCanvas(360, 210);
@@ -22,7 +23,7 @@ const stats = async (request, reply) => {
   // title
   ctx.font = "medium 20px Roboto";
   ctx.fillStyle = "white";
-  ctx.fillText(`${data.userName}'s SponsorBlock Stats`, 10, 25)
+  ctx.fillText(`${res.data.userName}'s SponsorBlock Stats`, 10, 25)
   // category test
   ctx.font = "medium 15px Roboto";
   for (let i = 0; i < categoryData.length; i++) {
@@ -34,7 +35,7 @@ const stats = async (request, reply) => {
     ctx.stroke()
     ctx.fill();
     // create label text
-    ctx.fillText(CATEGORIES_ARR[i], 40, rectY+5);
+    ctx.fillText(CATEGORIES_ARR[i], 30, rectY+5);
     // set number of submission
     //ctx.fillStyle = "black";
     ctx.fillText(categoryData[i], 200, rectY+5);
