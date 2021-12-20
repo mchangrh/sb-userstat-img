@@ -10,6 +10,7 @@ const PNGConfig = {
 
 const categories = async (request, reply) => {
   const userID = request.query.userID;
+  if (!userID) return reply.code(400).send({ error: "userID is required" });
   const res = await axios.get(`${BASEURL}/userStats?publicUserID=${userID}&fetchCategoryStats=true`)
   const categoryData = Object.values(res.data.categoryCount)
   const total = categoryData.reduce((a, b) => a + b, 0)
