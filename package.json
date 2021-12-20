@@ -1,4 +1,22 @@
 {
+  "name": "sb-userstat-img",
+  "version": "1.0.0",
+  "description": "sponsorblock userstats image generator",
+  "main": "src/server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mchangrh/sb-userstat-img.git"
+  },
+  "author": "Michael Chang <michael@mchang.name>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mchangrh/sb-userstat-img/issues"
+  },
+  "homepage": "https://github.com/mchangrh/sb-userstat-img#readme",
   "dependencies": {
     "axios": "^0.24.0",
     "canvas": "^2.8.0",
