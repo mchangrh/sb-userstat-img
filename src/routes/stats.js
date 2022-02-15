@@ -1,5 +1,5 @@
-const CATEGORIES_ARR = ["Sponsor", "Intro", "Outro", "Interaction Reminder", "Selfpromo", "Music: Non-Nusic", "Preview", "Highlight", "Filler"];
-const CATEGORY_COLORS_ARR = ["#00d400", "#00ffff", "#0202ed", "#cc00ff", "#ffff00", "#ff9900", "#008fd6", "#ff1684", "#6600ff"];
+const CATEGORIES_ARR = ["Sponsor", "Intro", "Outro", "Interaction Reminder", "Selfpromo", "Music: Non-Nusic", "Preview", "Highlight", "Filler", "Exclusive Access"];
+const CATEGORY_COLORS_ARR = ["#00d400", "#00ffff", "#0202ed", "#cc00ff", "#ffff00", "#ff9900", "#008fd6", "#ff1684", "#6600ff", "#008a5c"];
 const axios = require("axios")
 const Canvas = require("canvas")
 const BASEURL = "https://sponsor.ajay.app/api"
