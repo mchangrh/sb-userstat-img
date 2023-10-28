@@ -6,4 +6,7 @@ const { stats } = require('./routes/stats');
 fastify.get('/pie', categories)
 fastify.get('/stats', stats)
 
-fastify.listen({ port: 4000 });
+fastify.listen({
+    host: "::",
+    port: 4000
+});
